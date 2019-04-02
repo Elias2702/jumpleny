@@ -7,6 +7,8 @@ maxGap=500;
 gap=randGap();
 var myObstacles=[];
 var colors=["white","red"];
+var image = new Image();
+image.src = './assets/leny.png';
 
 function startGame(){
 	gamearea.start();

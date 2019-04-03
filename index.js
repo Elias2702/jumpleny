@@ -40,20 +40,19 @@ var player={
 	y:0,
 	speedY:0,
 	update:function(){
-		gamearea.context.fillStyle="white";
-		gamearea.context.fillRect(this.x,this.y,30,30);
+		gamearea.context.drawImage(image, this.x,this.y,80,80);
 	},
 	newPos:function(){
 		if(this.y<70){
 			this.speedY=2;
 		}
 		this.y=this.y+this.speedY;
-		if(this.speedY==2 && this.y==270){
+		if(this.speedY==2 && this.y==220){
 			this.speedY=0;
 		}
 	},
 	crashWith:function(obs){
-		if(this.x+30>obs.x && this.x<obs.x+obs.width && this.y+30>obs.y){
+		if(this.x+80>obs.x && this.x<obs.x+obs.width && this.y+80>obs.y){
 			return true;
 		}
 		return false;
